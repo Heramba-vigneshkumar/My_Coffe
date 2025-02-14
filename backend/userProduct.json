@@ -1,0 +1,32 @@
+[
+    {
+      "id": 1,
+       "images": [
+        "image/product-1.png"
+      ],
+      "title": "fresh coffee",
+      "new_price": 549,
+      "old_price": 12.96
+     
+    },
+    {
+        "id": 2,
+         "images": [
+          "image/product-2.png"
+        ],
+        "title": "Coffee Mockup",
+        "new_price": 549,
+        "old_price": 12.96
+       
+      },
+    {
+        "id": 3,
+         "images": [
+          "image/product-3.png"
+        ],
+        "title": "Coffee Beans",
+        "new_price": 549,
+        "old_price": 12.96
+       
+      }
+    ]
