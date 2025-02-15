@@ -1,6 +1,5 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const cors = require('cors')
 const app = express()
 const URL = "mongodb+srv://ram:12345@cluster0.gmysw.mongodb.net/mycoffe"
 const PORT = 3000
@@ -25,15 +24,7 @@ const CartModel = mongoose.model('cartItems', CartSchema)
 const postModel = mongoose.model('postItem', CartSchema)
 const productModel = mongoose.model('productItem', CartSchema)
 
-app.use(cors()
 app.use(express.json())
-
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://my-coffe-da7j.vercel.app');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  next();
-});
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
