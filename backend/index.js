@@ -26,7 +26,7 @@ const postModel = mongoose.model('postItem', CartSchema)
 const productModel = mongoose.model('productItem', CartSchema)
 
 app.use(cors({
-    origin:"https://my-coffe-da7j.vercel.app",
+    origin:"https://my-coffe-xi.vercel.app",
     credentials: true
 }))
 app.use(express.json())
