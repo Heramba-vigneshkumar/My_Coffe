@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const app = express()
-const URL = "mongodb+srv://ram:12345@cluster0.gmysw.mongodb.net/mycoffe"
+const URL = "mongodb+srv://vicky:devil@cluster0.rw560.mongodb.net/my_coffe?retryWrites=true&w=majority&appName=Cluster0"
 const PORT = 3000
 
 const UserSchema = new mongoose.Schema({
