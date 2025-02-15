@@ -30,7 +30,7 @@ window.onscroll = () => {
     cartItem.classList.remove("active");
 }
 function removeCart(removeId) {
-    fetch(URL + "/remove/" + removeId)
+    fetch(URL + "/remove/" + removeId,{mode: 'no-cors'})
         .then((res) => {
             if (res.ok) {
                 window.location.reload()
@@ -40,7 +40,7 @@ function removeCart(removeId) {
 }
 
 function manuCart() {
-    fetch(URL + "/menuCart")
+    fetch(URL + "/menuCart",{mode: 'no-cors'})
         .then(res => res.json())
         .then(data => {
             data.map((cartDetails) => {
@@ -59,12 +59,13 @@ function manuCart() {
 
 
 function addCart(id) {
-    fetch(URL + "/menuCart/" + id)
+    fetch(URL + "/menuCart/" + id,{mode: 'no-cors'})
         .then(data => data.json())
         .then(productDetails => {
             const { id, images, title, new_price, old_price } = productDetails
             fetch(URL + "/postCart",
                 {
+                    mode: 'no-cors',
                     method: 'POST',
                     body: JSON.stringify({
                         id,
@@ -87,7 +88,7 @@ function addCart(id) {
 }
 
 function cartItems() {
-    fetch(URL + "/getCart")
+    fetch(URL + "/getCart",{mode: 'no-cors'})
         .then(res => res.json())
         .then(data => {
             data.map((data) => {
@@ -113,6 +114,7 @@ function Submit(event) {
 
     fetch(URL + "/contact",
         {
+            mode: 'no-cors',
             method: 'POST',
             body: JSON.stringify({
                 name,
@@ -133,7 +135,7 @@ function Submit(event) {
 }
 
 function productItem() {
-    fetch(URL + "/productItem")
+    fetch(URL + "/productItem",{mode: 'no-cors'})
         .then(res => res.json())
         .then(data => {
             data.map((data) => {

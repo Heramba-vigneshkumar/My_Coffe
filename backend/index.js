@@ -25,12 +25,21 @@ const CartModel = mongoose.model('cartItems', CartSchema)
 const postModel = mongoose.model('postItem', CartSchema)
 const productModel = mongoose.model('productItem', CartSchema)
 
+<<<<<<< HEAD
 // app.use(cors({
 //     origin:"https://my-coffe-da7j.vercel.app",
 //     credentials: true
 // }))
 app.use(cors())
+=======
+>>>>>>> 01995967dbbc57e80947b6ff718e94f9068e88e5
 app.use(express.json())
+app.use(cors())
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
 
 mongoose.connect(URL).then(()=>{
     console.log("DB is Connected")
