@@ -25,7 +25,10 @@ const CartModel = mongoose.model('cartItems', CartSchema)
 const postModel = mongoose.model('postItem', CartSchema)
 const productModel = mongoose.model('productItem', CartSchema)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dabf9083e533b73e3c393fda9d0b92e5d65aca7a
 app.use(express.json())
 app.use(cors())
 
