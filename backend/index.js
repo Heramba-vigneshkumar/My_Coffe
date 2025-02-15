@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const app = express()
 const URL = "mongodb+srv://ram:12345@cluster0.gmysw.mongodb.net/mycoffe"
 const PORT = 3000
@@ -25,6 +26,7 @@ const postModel = mongoose.model('postItem', CartSchema)
 const productModel = mongoose.model('productItem', CartSchema)
 
 app.use(express.json())
+app.use(cors())
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
