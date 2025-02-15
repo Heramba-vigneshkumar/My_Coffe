@@ -1,4 +1,4 @@
-const URL = "http://localhost:3000"
+const URL = "https://my-coffe-xi.vercel.app"
 
 let navbar = document.querySelector(".navbar")
 
@@ -30,7 +30,7 @@ window.onscroll = () => {
     cartItem.classList.remove("active");
 }
 function removeCart(removeId) {
-    fetch(URL + "/remove/" + removeId,{mode: 'no-cors'})
+    fetch(URL + "/remove/" + removeId)
         .then((res) => {
             if (res.ok) {
                 window.location.reload()
@@ -40,7 +40,7 @@ function removeCart(removeId) {
 }
 
 function manuCart() {
-    fetch(URL + "/menuCart",{mode: 'no-cors'})
+    fetch(URL + "/menuCart")
         .then(res => res.json())
         .then(data => {
             data.map((cartDetails) => {
@@ -59,13 +59,12 @@ function manuCart() {
 
 
 function addCart(id) {
-    fetch(URL + "/menuCart/" + id,{mode: 'no-cors'})
+    fetch(URL + "/menuCart/" + id)
         .then(data => data.json())
         .then(productDetails => {
             const { id, images, title, new_price, old_price } = productDetails
             fetch(URL + "/postCart",
                 {
-                    mode: 'no-cors',
                     method: 'POST',
                     body: JSON.stringify({
                         id,
@@ -88,7 +87,7 @@ function addCart(id) {
 }
 
 function cartItems() {
-    fetch(URL + "/getCart",{mode: 'no-cors'})
+    fetch(URL + "/getCart")
         .then(res => res.json())
         .then(data => {
             data.map((data) => {
@@ -114,7 +113,6 @@ function Submit(event) {
 
     fetch(URL + "/contact",
         {
-            mode: 'no-cors',
             method: 'POST',
             body: JSON.stringify({
                 name,
@@ -135,7 +133,7 @@ function Submit(event) {
 }
 
 function productItem() {
-    fetch(URL + "/productItem",{mode: 'no-cors'})
+    fetch(URL + "/productItem")
         .then(res => res.json())
         .then(data => {
             data.map((data) => {

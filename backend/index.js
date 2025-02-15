@@ -25,7 +25,7 @@ const CartModel = mongoose.model('cartItems', CartSchema)
 const postModel = mongoose.model('postItem', CartSchema)
 const productModel = mongoose.model('productItem', CartSchema)
 
-app.use(cors())
+
 app.use(express.json())
 app.use(cors())
 
