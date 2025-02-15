@@ -1,4 +1,4 @@
-const URL = "https://my-coffe-xi.vercel.app"
+const URL = "http://localhost:3000"
 
 let navbar = document.querySelector(".navbar")
 
