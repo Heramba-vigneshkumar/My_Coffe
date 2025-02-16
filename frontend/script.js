@@ -1,4 +1,4 @@
-const URL = "https://my-coffe-xi.vercel.app"
+const URL = "https://my-coffe-ten.vercel.app"
 
 let navbar = document.querySelector(".navbar")
 
