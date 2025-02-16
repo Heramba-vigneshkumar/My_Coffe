@@ -1,4 +1,4 @@
-const URL = "https://backend-937p.onrender.com"
+const URL = "https://my-coffe-backend.onrender.com"
 
 let navbar = document.querySelector(".navbar")
 
