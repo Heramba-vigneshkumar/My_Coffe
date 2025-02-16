@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const URL = "https://backend-937p.onrender.com/"
+=======
+const URL = "https://my-coffe-ten.vercel.app"
+>>>>>>> 45e8d314331e516d33e58c2c5a0f82ceeebda79b
 
 let navbar = document.querySelector(".navbar")
 
